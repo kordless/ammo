@@ -1,0 +1,83 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #002842;
+    color: white !important; /* Ensure header text is white */
+    text-align: center;
+    padding: 10px 0; /* Reduce padding to half */
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Increase letter spacing */
+}
+
+nav a {
+    color: white !important; /* Ensure nav links are white */
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 25px; /* Increase spacing between links */
+    font-size: 85%; /* Make font size 15% smaller */
+}
+
+.hero {
+    position: relative;
+    background: url('../images/hero.jpeg') no-repeat center center/cover;
+    height: 500px;
+}
+
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero::before {
+    background: rgba(0, 0, 0, 0.5);
+    mix-blend-mode: multiply; /* Apply multiply effect */
+}
+
+.hero::after {
+    mix-blend-mode: overlay;
+    filter: saturate(2); /* Increase saturation */
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 24px;
+    margin: 10px 0 0 0;
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 35px;
+    }
+    
+    .hero-text p {
+        font-size: 18px;
+    }
+    
+    nav a {
+        margin: 0 15px;
+        font-size: 90%;
+    }
+}
