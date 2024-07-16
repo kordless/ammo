@@ -1,7 +1,63 @@
+@font-face {
+    font-family: 'Gotham-Black';
+    src: url('../fonts/Gotham-Black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('../fonts/Gotham-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham-Book';
+    src: url('../fonts/Gotham-Book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham-BookItalic';
+    src: url('../fonts/Gotham-BookItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url('../fonts/Gotham-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Didot-Bold';
+    src: url('../fonts/Didot Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Didot-Italic';
+    src: url('../fonts/Didot Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Didot-Title';
+    src: url('../fonts/Didot Title.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Didot';
+    src: url('../fonts/Didot.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Update body tag to use Gotham fonts */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Gotham-Book', Arial, sans-serif;
 }
 
 header {
@@ -18,7 +74,7 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     margin: 0 25px; /* Increase spacing between links */
-    font-size: 85%; /* Make font size 15% smaller */
+    font-size: 0.8em; /* Make font size 15% smaller */
 }
 
 .hero {
@@ -58,13 +114,45 @@ nav a {
 }
 
 .hero-text h1 {
-    font-size: 50px;
+    font-size: 3em;
     margin: 0;
 }
 
 .hero-text p {
-    font-size: 24px;
+    font-size: 1.6em;
     margin: 10px 0 0 0;
+}
+
+.full-width-section {
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+  
+.full-width-section > div {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.full-width-section p {
+    font-size: 1.3em;
+}
+
+.peace-text {
+    font-family: 'Didot-Italic', serif;
+    font-style: italic;
+    font-size: 1.3em;
+}
+
+.gotham-bold {
+    font-family: 'Gotham-Bold', sans-serif;
+}
+
+div.full-width-section div h2 {
+    font-family: 'Didot-Italic', serif;
+    font-style: italic;
+    font-size: 2em;
 }
 
 @media (max-width: 768px) {
