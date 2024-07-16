@@ -1,0 +1,5 @@
+# Changelog
+
+## 2024-07-16 11:38:27
+### Changes
+Reformatted LICENSE file to limit line lengths and prevent wrapping
