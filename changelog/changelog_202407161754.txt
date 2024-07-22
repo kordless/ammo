@@ -1,5 +1,0 @@
-# Changelog
-
-## 2024-07-16 17:54:55
-### Changes
-Updated font styles and added Didot-Italic to peace-text and full-width-section h2.
