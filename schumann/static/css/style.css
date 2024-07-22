@@ -175,7 +175,23 @@ div.full-width-section div h2 {
     background-color: #002842; /* Dark blue color */
     border-color: #002842; /* Ensure border matches the background */
 }
+.projects-header {
+ padding: 20px 0;
+ background-color: #f0f0f0;
+ text-align: center;
+ }
 
+.projects-header-text h1 {
+ font-family: 'Didot-Italic', serif;
+ font-style: italic;
+ font-size: 2.5em;
+ margin-bottom: 10px;
+ }
+
+.projects-header-text p {
+ font-size: 1.2em;
+ margin-top: 5px;
+ }
 .testimonial {
     background-color: #333333;
     color: white;
@@ -212,7 +228,7 @@ div.full-width-section div h2 {
 .footer-container {
     background-color: #002842;
     color: white;
-    padding: 20px;
+    padding: 40px;
     text-align: center;
     text-transform: uppercase; /* All content in all caps */
     font-size: 0.8em; /* Make font size 20% smaller */
