@@ -8,93 +8,66 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-    <header class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="navbar-nav mx-auto">
-                <a class="nav-item nav-link" href="#">Project Management</a>
-                <a class="nav-item nav-link" href="#">Projects</a>
-                <a class="nav-item nav-link" href="#">About</a>
-                <a class="nav-item nav-link" href="#">Contact</a>
-            </div>
-        </nav>
-    </header>
-    <section class="hero">
-        <div class="hero-text container">
-            <h1 class="gotham-bold">Projects</h1>
-            <p>Schumann Consulting treats every project like it's the most important. Because it is.</p>
-        </div>
-    </section>
-    <div class="container mt-5 mb-5 recent-projects-section">
-        <h2 class="text-center mb-4">Recent Projects</h2>
-        <div class="row">
-            <div class="col-md-4 mb-4 d-flex flex-column align-items-center">
-                <img src="/static/images/333west.jpg" class="img-fluid" alt="Project 1">
-                <div class="text-center mt-2">
-                    <strong>333 West San Antonio Street</strong><br>
-                    <em>Commercial Conversion</em>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4 d-flex flex-column align-items-center">
-                <img src="/static/images/saludos.jpg" class="img-fluid" alt="Project 2">
-                <div class="text-center mt-2">
-                    <strong>Saludos!</strong><br>
-                    <em>Restaurant/Bar</em>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4 d-flex flex-column align-items-center">
-                <img src="/static/images/faust.jpg" class="img-fluid" alt="Project 3">
-                <div class="text-center mt-2">
-                    <strong>Faust Hotel</strong><br>
-                    <em>Hospitality</em>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4 d-flex flex-column align-items-center">
-                <img src="/static/images/crisis.jpg" class="img-fluid" alt="Project 4">
-                <div class="text-center mt-2">
-                    <strong>Crisis Center of Comal County</strong><br>
-                    <em>Multifamily</em>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4 d-flex flex-column align-items-center">
-                <img src="/static/images/connections.jpg" class="img-fluid" alt="Project 5">
-                <div class="text-center mt-2">
-                    <strong>Connections</strong><br>
-                    <em>Office/Residential</em>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4 d-flex flex-column align-items-center">
-                <img src="/static/images/nolls.jpg" class="img-fluid" alt="Project 6">
-                <div class="text-center mt-2">
-                    <strong>Noll's Vite</strong><br>
-                    <em>Restaurant/Bar</em>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer Section -->
-    <div class="footer-container">
-        <div class="footer-content">
-            <div class="footer-column-left">
-                <ul class="footer-links">
-                    <li><a href="#">PROJECT MANAGEMENT</a></li>
-                    <li><a href="#">PROJECTS</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                </ul>
-            </div>
-            <div class="footer-column-right">
-                <ul class="footer-address">
-                    <li>SCHUMANN CONSULTING</li>
-                    <li>977 NORTH LIVE OAK</li>
-                    <li>NEW BRAUNFELS, TEXAS 78130</li>
-                    <li><a href="#">MAP</a></li>
-                    <li>PHONE (830) 327-1254</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom-text">
-            <p>&copy; 20224 MOSSBACK CONSTRUCTION DBA SCHUMANN CONSULTING</p>
-        </div>
-    </div>
+
+<header class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light">
+<div class="navbar-nav mx-auto">
+<a class="nav-item nav-link" href="#">Project Management</a>
+<a class="nav-item nav-link" href="#">Projects</a>
+<a class="nav-item nav-link" href="#">About</a>
+<a class="nav-item nav-link" href="#">Contact</a>
+</div>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-text container">
+<h1 class="gotham-bold">Projects</h1>
+<p>Schumann Consulting treats every project like it's the most important. Because it is.</p>
+</div>
+</section>
+
+<div class="container mt-5 mb-5 recent-projects-section">
+<h2 class="text-center mb-4">Recent Projects</h2>
+<div class="row">
+{% for project in projects %}
+<div class="col-md-4 mb-4 d-flex flex-column align-items-center">
+<img src="/static/images/{{ project.image }}" class="img-fluid" alt="Project {{ project.project_title }}">
+<div class="text-center mt-2">
+<strong>{{ project.project_title }}</strong><br>
+<em>{{ project.summary }}</em><br>
+<a href="/project/{{ project.project_stub }}">View Details</a>
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
+
+<!-- Footer Section -->
+<div class="footer-container">
+<div class="footer-content">
+<div class="footer-column-left">
+<ul class="footer-links">
+<li><a href="#">PROJECT MANAGEMENT</a></li>
+<li><a href="#">PROJECTS</a></li>
+<li><a href="#">ABOUT</a></li>
+<li><a href="#">CONTACT</a></li>
+</ul>
+</div>
+<div class="footer-column-right">
+<ul class="footer-address">
+<li>SCHUMANN CONSULTING</li>
+<li>977 NORTH LIVE OAK</li>
+<li>NEW BRAUNFELS, TEXAS 78130</li>
+<li><a href="#">MAP</a></li>
+<li>PHONE (830) 327-1254</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom-text">
+<p>&copy; 20224 MOSSBACK CONSTRUCTION DBA SCHUMANN CONSULTING</p>
+</div>
+</div>
+
 </body>
 </html>

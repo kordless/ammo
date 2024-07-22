@@ -2,10 +2,10 @@
 
 # File: schumann\app.py
 def file_summary():
-    imports = ['flask.Flask', 'views.home']
+    imports = ['flask.Flask', 'flask.render_template']
     decorators = []
-    functions = []
-    function_calls = ['Flask', 'app.add_url_rule', 'app.run']
+    functions = ['home', 'projects']
+    function_calls = ['Flask', 'render_template', 'app.add_url_rule', 'render_template', 'app.route', 'app.run']
     return {
         'imports': imports,
         'decorators': decorators,
@@ -13,12 +13,12 @@ def file_summary():
         'function_calls': function_calls
     }
 
-# File: schumann\views.py
+# File: schumann\function_summary.py
 def file_summary():
-    imports = ['flask.render_template']
+    imports = []
     decorators = []
-    functions = ['home']
-    function_calls = ['render_template']
+    functions = ['file_summary', 'file_summary']
+    function_calls = []
     return {
         'imports': imports,
         'decorators': decorators,

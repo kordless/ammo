@@ -1,0 +1,74 @@
+[
+    {
+        "project_title": "Project Alpha",
+        "client": "Client XYZ",
+        "location": "San Antonio, TX",
+        "construction_value": "2,000,000 USD",
+        "services_provided": ["Commercial Conversion"],
+        "industry": "Commercial",
+        "description": "Detailed description of 333 West San Antonio Street.",
+        "project_stub": "333-west-san-antonio-street",
+        "image": "333west.jpg",
+        "summary": "Commercial Conversion"
+    },
+    {
+        "project_title": "Saludos!",
+        "client": "Client ABC",
+        "location": "San Francisco, CA",
+        "construction_value": "1,500,000 USD",
+        "services_provided": ["Restaurant/Bar"],
+        "industry": "Restaurant",
+        "description": "Detailed description of Saludos! project.",
+        "project_stub": "saludos",
+        "image": "saludos.jpg",
+        "summary": "Restaurant/Bar"
+    },
+    {
+        "project_title": "Faust Hotel",
+        "client": "Client DEF",
+        "location": "New Braunfels, TX",
+        "construction_value": "3,000,000 USD",
+        "services_provided": ["Hospitality"],
+        "industry": "Hospitality",
+        "description": "Detailed description of Faust Hotel.",
+        "project_stub": "faust-hotel",
+        "image": "faust.jpg",
+        "summary": "Hospitality"
+    },
+    {
+        "project_title": "Crisis Center of Comal County",
+        "client": "Client GHI",
+        "location": "Comal County, TX",
+        "construction_value": "2,500,000 USD",
+        "services_provided": ["Multifamily"],
+        "industry": "Multifamily",
+        "description": "Detailed description of Crisis Center of Comal County.",
+        "project_stub": "crisis-center-comal",
+        "image": "crisis.jpg",
+        "summary": "Multifamily"
+    },
+    {
+        "project_title": "Connections",
+        "client": "Client JKL",
+        "location": "Location V",
+        "construction_value": "3,200,000 USD",
+        "services_provided": ["Office/Residential"],
+        "industry": "Office/Residential",
+        "description": "Detailed description of Connections project.",
+        "project_stub": "connections",
+        "image": "connections.jpg",
+        "summary": "Office/Residential"
+    },
+    {
+        "project_title": "Noll's Vite",
+        "client": "Client MNO",
+        "location": "Location U",
+        "construction_value": "1,800,000 USD",
+        "services_provided": ["Restaurant/Bar"],
+        "industry": "Restaurant",
+        "description": "Detailed description of Noll's Vite.",
+        "project_stub": "nolls-vite",
+        "image": "nolls.jpg",
+        "summary": "Restaurant/Bar"
+    }
+]
