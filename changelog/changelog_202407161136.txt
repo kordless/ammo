@@ -1,5 +1,0 @@
-# Changelog
-
-## 2024-07-16 11:36:17
-### Changes
-Committing all changes including LICENSE file

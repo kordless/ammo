@@ -1,5 +1,0 @@
-# Changelog
-
-## 2024-07-16 11:32:08
-### Changes
-Add BSD license to the root directory with updated copyright information

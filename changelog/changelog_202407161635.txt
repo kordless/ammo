@@ -1,5 +1,0 @@
-# Changelog
-
-## 2024-07-16 16:35:53
-### Changes
-Moved index.html from schumann directory to templates
