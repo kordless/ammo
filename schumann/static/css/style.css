@@ -1,26 +1,26 @@
 @font-face {
     font-family: 'Gotham-Black';
-    src: url('../fonts/Gotham-Black.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+   src: url('../fonts/Gotham-Black.otf') format('opentype');
+   font-weight: normal;
+   font-style: normal;
 }
 @font-face {
     font-family: 'Gotham-Bold';
-    src: url('../fonts/Gotham-Bold.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
+   src: url('../fonts/Gotham-Bold.otf') format('opentype');
+   font-weight: bold;
+   font-style: normal;
 }
 @font-face {
     font-family: 'Gotham-Book';
-    src: url('../fonts/Gotham-Book.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+   src: url('../fonts/Gotham-Book.otf') format('opentype');
+   font-weight: normal;
+   font-style: normal;
 }
 @font-face {
     font-family: 'Gotham-BookItalic';
-    src: url('../fonts/Gotham-BookItalic.otf') format('opentype');
-    font-weight: normal;
-    font-style: italic;
+   src: url('../fonts/Gotham-BookItalic.otf') format('opentype');
+   font-weight: normal;
+   font-style: italic;
 }
 @font-face {
     font-family: 'Gotham-Medium';
@@ -37,8 +37,8 @@
 @font-face {
     font-family: 'Didot-Italic';
     src: url('../fonts/Didot Italic.otf') format('opentype');
-    font-weight: normal;
-    font-style: italic;
+   font-weight: normal;
+   font-style: italic;
 }
 @font-face {
     font-family: 'Didot-Title';
@@ -79,7 +79,8 @@ nav a {
 
 .hero {
     position: relative;
-    background: url('../images/hero.jpg') no-repeat center center/cover;
+    background: url('../images/hero.jpg') no-repeat center center;
+    background-size: cover;
     height: 500px;
 }
 
@@ -103,20 +104,21 @@ nav a {
     z-index: 1;
 }
 
-.hero-text h1 {
-    font-size: 3em;
+ .hero-text h1 {
+    font-size: 4em;
     margin: 0;
-}
+ }
 
-.hero-text p {
-    font-size: 1.6em;
+ .hero-text p {
+    font-size: 2em;
     margin: 10px 0 0 0;
-}
+ }
 
 .full-width-section {
     width: 100%;
     background-color: #f0f0f0;
     padding: 20px;
+    padding-top: 40px;
     text-align: center;
 }
   
@@ -126,13 +128,13 @@ nav a {
 }
 
 .full-width-section p {
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 
 .peace-text {
     font-family: 'Didot-Italic', serif;
     font-style: italic;
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 
 .gotham-bold {
@@ -148,7 +150,49 @@ div.full-width-section div h2 {
 .recent-projects-section h2 {
     font-family: 'Didot-Italic', serif;
     font-style: italic;
-    font-size: 2em;
+    font-size: 2.2em;
+}
+
+.recent-projects-section .text-center strong {
+    color: #002842; 
+    font-family: 'Gotham-Bold', serif;
+}
+
+.recent-projects-section .text-center em {
+    font-family: 'Didot-Italic', serif; 
+    font-style: italic;
+}
+
+.recent-projects-section img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* Ensure appropriate aspect ratio handling */
+}
+
+.recent-projects-section .btn-primary {
+    border-radius: 5px; /* Add a slight border-radius */
+    text-transform: uppercase; /* Make text all uppercase */
+    background-color: #002842; /* Dark blue color */
+    border-color: #002842; /* Ensure border matches the background */
+}
+
+.testimonial {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 60px;
+    margin-top: 20px;
+}
+
+.testimonial-content {
+    max-width: 50%; /* Set max-width to 50% */
+    margin-left: auto;
+    margin-right: auto; /* Center align the testimonial text */
+    font-size: 1.4em; /* Set font size */
+}
+
+.testimonial-author {
+ font-style: italic;
 }
 
 @media (max-width: 768px) {
@@ -162,6 +206,54 @@ div.full-width-section div h2 {
     
     nav a {
         margin: 0 15px;
-        font-size: 90%;
     }
+}
+
+.footer-container {
+    background-color: #002842;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase; /* All content in all caps */
+    font-size: 0.8em; /* Make font size 20% smaller */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align the top of both columns */
+    margin-bottom: 20px;
+}
+
+.footer-column-left, .footer-column-right {
+    flex: 1;
+}
+
+.footer-column-left {
+    text-align: right;
+    margin-right: 20px; /* Add spacing to the right of the left column */
+}
+
+.footer-column-right {
+    text-align: left;
+    margin-left: 20px; /* Add spacing to the left of the right column */
+}
+
+.footer-links, .footer-address {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li, .footer-address li {
+    margin: 8px 0;
+}
+
+.footer-links a, .footer-address a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom-text {
+    text-align: center;
 }
