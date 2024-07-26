@@ -216,6 +216,56 @@ div.full-width-section div h2 {
     outline-offset: -2px;
 }
 
+
+/* Breadcrumb-specific styles */
+.breadcrumb-container {
+    padding: 0;
+    background-color: white;
+    font-size: 0.8em;
+}
+
+.breadcrumb {
+    padding: 0.5rem 0;
+    margin-bottom: 0;
+    background-color: white;
+    margin-left: 14px
+}
+
+.breadcrumb-item {
+    text-transform: uppercase;
+    color: #002842;
+    font-family: 'Gotham-Bold', sans-serif;
+}
+
+/* Increase specificity for breadcrumb links */
+.breadcrumb .breadcrumb-item a {
+    color: #002842 !important;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0;
+    font-size: inherit;
+}
+
+.breadcrumb .breadcrumb-item a:visited {
+    color: #002842 !important;
+}
+
+.breadcrumb .breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: #002842;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: ">";
+    color: #002842;
+    font-weight: bold;
+    margin: 0 5px;
+    padding-left: 0;
+}
+
 .project-navigation {
     margin: 2rem 0;
 }
@@ -262,6 +312,23 @@ div.full-width-section div h2 {
 .project-details span {
     display: block;
 }
+
+.project-details h1 {
+    font-family: 'Didot-Italic', serif;
+    font-style: italic;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.recent-projects-section .project-title-link {
+    color: #002842;  /* Dark blue color */
+    text-decoration: none;
+}
+
+.recent-projects-section .project-title-link:hover {
+    text-decoration: underline;
+}
+
 .project-navigation {
     margin: 2rem 0;
 }

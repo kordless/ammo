@@ -26,17 +26,23 @@
                 <p>Schumann Consulting treats every project like it's the most important. Because it is.</p>
             </div>
         </section>
-
+        <div class="container mt-3 mb-5 breadcrumb-container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item gotham-bold"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item gotham-bold">Projects</li>
+                </ol>
+            </nav>
+        </div>
         <div class="container mt-5 mb-5 recent-projects-section">
             <h2 class="text-center mb-4">Recent Projects</h2>
             <div class="row">
-                {% for project in projects %}
+                {% for project in projects[:6] %}
                 <div class="col-md-4 mb-4 d-flex flex-column align-items-center">
                     <img src="/static/images/{{ project.image }}" class="img-fluid" alt="Project {{ project.project_title }}">
                     <div class="text-center mt-2">
-                        <strong>{{ project.project_title }}</strong><br>
+                        <strong><a class="project-title-link" href="/project/{{ project.project_stub }}">{{ project.project_title }}</a></strong><br>
                         <em>{{ project.summary }}</em><br>
-                        <a href="/project/{{ project.project_stub }}">View Details</a>
                     </div>
                 </div>
                 {% endfor %}

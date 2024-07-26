@@ -19,17 +19,31 @@
         </nav>
         <div class="overlap-box"><img src="static/images/logo.jpg" alt="Logo Image"></div>
     </header>
-
     <section class="hero">
         <div class="hero-text container">
-            <h1 class="gotham-bold"><span class="peace-text">Contact</span></h1>
+            <h1 class="gotham-bold"><span class="peace-text">Contact Us</span></h1>
             <p>We'd love to hear from you!</p>
         </div>
     </section>
-
+    <div class="container mt-3 mb-5 breadcrumb-container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item gotham-bold"><a href="/">Home</a></li>
+                <li class="breadcrumb-item gotham-bold">Contact Us</li>
+            </ol>
+        </nav>
+    </div>
+    
     <div class="container mt-5 mb-5">
         <div class="row">
-            <div class="col-md-8 offset-md-2">
+            <div class="col-12">
+                <p class="lead">
+                    We're looking forward to hearing from you about your project!
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 <form method="POST" action="/contact">
                     <div class="form-group">
                         <label for="name">Name</label>
