@@ -1,5 +1,5 @@
 import json
-from flask import Flask, render_template
+from flask import Flask, render_template, flash, redirect, url_for, request
 
 # Initialize the Flask application
 app = Flask(__name__)
@@ -14,6 +14,26 @@ def projects():
     with open('data/projects.json', 'r') as file:
         projects_data = json.load(file)
     return render_template('projects.html', projects=projects_data)
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/contact', methods=["GET", "POST"])
+def contact():
+    if request.method == "POST":
+        name = request.form.get("name")
+        email = request.form.get("email")
+        message = request.form.get("message")
+
+        # Here, you would add functionality to send an email with the submitted information.
+        # For now, we can just flash a message.
+
+        flash("Thank you for your message! We will get back to you shortly.", "success")
+
+        return redirect(url_for('contact'))
+
+    return render_template('contact.html')
 
 @app.route('/project/<project_stub>')
 def project_detail(project_stub):
