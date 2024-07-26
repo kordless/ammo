@@ -114,6 +114,26 @@ nav a {
     margin: 10px 0 0 0;
  }
 
+ .overlap-box {
+    position: absolute;
+    top: 60px; /* Adjust as needed to overlap both header and hero */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    border-radius: 5px; /* Rounded corners */
+    z-index: 1000; /* Ensures the box is above other elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Horizontal center alignment */
+}
+.overlap-box img {
+    max-width: 100%;
+    max-width: 150px;
+    max-height: 100%;
+    border-radius: 5px; /* Ensures the image also has rounded corners */
+}
+
 .full-width-section {
     width: 100%;
     background-color: #f0f0f0;
@@ -272,4 +292,22 @@ div.full-width-section div h2 {
 
 .footer-bottom-text {
     text-align: center;
+}
+
+.footer-address li {
+    margin: 4px 0; /* Adjust the margin for tighter vertical spacing */
+    line-height: 1.2; /* Adjust the line height for tighter text spacing */
+    padding: 0; /* Remove any padding */
+}
+
+.footer-address li:first-child {
+    margin: 8px 0;
+    line-height: normal; /* Maintain line height for the first item */
+}
+
+.footer-address li img {
+    width: 24px; /* Adjust size as appropriate */
+    height: 24px; /* Adjust size as appropriate */
+    margin-right: 5px; /* Add some space between the icon and the text */
+    margin-top: 10px;
 }
