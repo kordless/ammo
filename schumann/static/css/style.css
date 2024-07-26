@@ -1,26 +1,26 @@
 @font-face {
     font-family: 'Gotham-Black';
-   src: url('../fonts/Gotham-Black.otf') format('opentype');
-   font-weight: normal;
-   font-style: normal;
+    src: url('../fonts/Gotham-Black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
     font-family: 'Gotham-Bold';
-   src: url('../fonts/Gotham-Bold.otf') format('opentype');
-   font-weight: bold;
-   font-style: normal;
+    src: url('../fonts/Gotham-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
 }
 @font-face {
     font-family: 'Gotham-Book';
-   src: url('../fonts/Gotham-Book.otf') format('opentype');
-   font-weight: normal;
-   font-style: normal;
+    src: url('../fonts/Gotham-Book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
     font-family: 'Gotham-BookItalic';
-   src: url('../fonts/Gotham-BookItalic.otf') format('opentype');
-   font-weight: normal;
-   font-style: italic;
+    src: url('../fonts/Gotham-BookItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
 }
 @font-face {
     font-family: 'Gotham-Medium';
@@ -37,8 +37,8 @@
 @font-face {
     font-family: 'Didot-Italic';
     src: url('../fonts/Didot Italic.otf') format('opentype');
-   font-weight: normal;
-   font-style: italic;
+    font-weight: normal;
+    font-style: italic;
 }
 @font-face {
     font-family: 'Didot-Title';
@@ -81,7 +81,8 @@ nav a {
     position: relative;
     background: url('../images/hero.jpg') no-repeat center center;
     background-size: cover;
-    height: 500px;
+    height: 500px; /* Shortened hero section */
+    padding-top: 20px; /* Increase padding at the top */
 }
 
 .hero::before,
@@ -104,17 +105,27 @@ nav a {
     z-index: 1;
 }
 
- .hero-text h1 {
-    font-size: 4em;
+.hero-text h1 {
+    font-size: 3em;
     margin: 0;
- }
+}
 
- .hero-text p {
-    font-size: 2em;
+.hero-text p {
+    font-size: 1.5em;
     margin: 10px 0 0 0;
- }
+}
 
- .overlap-box {
+/* Override for projects page */
+.interior-page .hero {
+    height: 300px; /* Override height for the projects page */
+}
+
+.interior-page .hero-text h1 {
+    padding-top: 20px;
+    font-size: 1.8em; /* Adjust font size for the projects page */
+}
+
+.overlap-box {
     position: absolute;
     top: 60px; /* Adjust as needed to overlap both header and hero */
     left: 50%;
@@ -128,7 +139,6 @@ nav a {
     text-align: center; /* Horizontal center alignment */
 }
 .overlap-box img {
-    max-width: 100%;
     max-width: 150px;
     max-height: 100%;
     border-radius: 5px; /* Ensures the image also has rounded corners */
@@ -141,7 +151,7 @@ nav a {
     padding-top: 40px;
     text-align: center;
 }
-  
+
 .full-width-section > div {
     width: 60%;
     margin: 0 auto;
@@ -174,12 +184,12 @@ div.full-width-section div h2 {
 }
 
 .recent-projects-section .text-center strong {
-    color: #002842; 
+    color: #002842;
     font-family: 'Gotham-Bold', serif;
 }
 
 .recent-projects-section .text-center em {
-    font-family: 'Didot-Italic', serif; 
+    font-family: 'Didot-Italic', serif;
     font-style: italic;
 }
 
@@ -196,28 +206,32 @@ div.full-width-section div h2 {
     border-color: #002842; /* Ensure border matches the background */
 }
 .projects-header {
- padding: 20px 0;
- background-color: #f0f0f0;
- text-align: center;
- }
+    padding: 20px 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
 
 .projects-header-text h1 {
- font-family: 'Didot-Italic', serif;
- font-style: italic;
- font-size: 2.5em;
- margin-bottom: 10px;
- }
+    font-family: 'Didot-Italic', serif;
+    font-style: italic;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
 
 .projects-header-text p {
- font-size: 1.2em;
- margin-top: 5px;
- }
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
 .testimonial {
     background-color: #333333;
     color: white;
     text-align: center;
     padding: 60px;
     margin-top: 20px;
+    height: 25vh;
+    min-height: 300px;
+    display: flex;
 }
 
 .testimonial-content {
@@ -228,18 +242,31 @@ div.full-width-section div h2 {
 }
 
 .testimonial-author {
- font-style: italic;
+    font-style: italic;
+}
+
+.quote-item {
+    display: none;
+}
+
+.quote-item:first-child {
+    display: block;
+}
+
+.quote-author {
+    font-style: italic;
+    margin-top: 10px;
 }
 
 @media (max-width: 768px) {
     .hero-text h1 {
         font-size: 35px;
     }
-    
+
     .hero-text p {
         font-size: 18px;
     }
-    
+
     nav a {
         margin: 0 15px;
     }
@@ -299,15 +326,12 @@ div.full-width-section div h2 {
     line-height: 1.2; /* Adjust the line height for tighter text spacing */
     padding: 0; /* Remove any padding */
 }
-
 .footer-address li:first-child {
-    margin: 8px 0;
+    margin-top: 8px; /* Maintain spacing for the first item */
     line-height: normal; /* Maintain line height for the first item */
 }
-
 .footer-address li img {
-    width: 24px; /* Adjust size as appropriate */
-    height: 24px; /* Adjust size as appropriate */
+    width: 16px; /* Adjust size as appropriate */
+    height: 16px; /* Adjust size as appropriate */
     margin-right: 5px; /* Add some space between the icon and the text */
-    margin-top: 10px;
 }

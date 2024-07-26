@@ -39,8 +39,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 text-center mt-4">
-                <p>{{ project.description }}</p>
+            <div class="col-12 mt-4">
+                <p>{{ project.description|safe }}</p> <!-- Note the `|safe` filter to allow HTML rendering -->
             </div>
         </div>
     </div>
@@ -57,16 +57,16 @@
             </div>
             <div class="footer-column-right">
                 <ul class="footer-address">
-                    <li>SCHUMANN CONSULTING</li>
                     <li>977 NORTH LIVE OAK</li>
                     <li>NEW BRAUNFELS, TEXAS 78130</li>
                     <li><a href="#">MAP</a></li>
                     <li>PHONE (830) 327-1254</li>
+                    <li><a href="https://www.linkedin.com"><img src="/static/images/linkedin.png" alt="LinkedIn"></a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom-text">
-            <p>&copy; 2024 MOSSBACK CONSTRUCTION DBA SCHUMANN CONSULTING</p>
+            <p>&copy; 20224 MOSSBACK CONSTRUCTION DBA SCHUMANN CONSULTING</p>
         </div>
     </div>
 </body>

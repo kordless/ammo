@@ -6,6 +6,7 @@
     <title>Schumann Project</title>
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
     <header class="container-fluid">
@@ -82,13 +83,23 @@
             </div>
         </div>
         <div class="text-center">
-            <button class="btn btn-primary">See More</button>
+            <button class="btn btn-primary" onclick="window.location.href='/projects';">See More</button>
         </div>
     </div>
     <div class="testimonial">
         <div class="testimonial-content">
-            <p>“Working with Schumann Consulting saved our project well more than their fee. They worked with the City of New Braunfels and our GC to keep everyone on time and on budget. I couldn't recommend them enough.”</p>
-            <p class="testimonial-author"><em>Gary Seals, Further Holdings</em></p>
+            <div class="quote-item">
+                <p>“Working with Schumann Consulting saved our project well more than their fee. They worked with the City of New Braunfels and our GC to keep everyone on time and on budget. I couldn't recommend them enough.”</p>
+                <p class="quote-author"><em>Gary Seals, Further Holdings</em></p>
+            </div>
+            <div class="quote-item">
+                <p>“The level of professionalism and attention to detail was outstanding. Schumann Consulting seamlessly integrated with our team and handled all the complexities of our project.”</p>
+                <p class="quote-author"><em>Sarah Johnson, TechCorp</em></p>
+            </div>
+            <div class="quote-item">
+                <p>“Schumann Consulting turned what could have been a logistical nightmare into a smooth, efficient process. Their expertise is unmatched.”</p>
+                <p class="quote-author"><em>Michael Smith, BuildRight Inc.</em></p>
+            </div>
         </div>
     </div>
     <!-- Footer Section -->
@@ -116,5 +127,20 @@
             <p>&copy; 20224 MOSSBACK CONSTRUCTION DBA SCHUMANN CONSULTING</p>
         </div>
     </div>
+    <script>
+        $(document).ready(function(){
+            let quotes = $('.quote-item');
+            let currentQuote = 0;
+
+            function showNextQuote() {
+                quotes.eq(currentQuote).fadeOut('slow', function() {
+                    currentQuote = (currentQuote + 1) % quotes.length;
+                    quotes.eq(currentQuote).fadeIn('slow');
+                });
+            }
+
+            setInterval(showNextQuote, 7000);
+        });
+    </script>
  </body>
 </html>
