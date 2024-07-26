@@ -1,73 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ project.project_title }}</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-</head>
-<body>
-    <header class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="navbar-nav mx-auto">
-                <a class="nav-item nav-link" href="#">Project Management</a>
-                <a class="nav-item nav-link" href="#">Projects</a>
-                <a class="nav-item nav-link" href="#">About</a>
-                <a class="nav-item nav-link" href="#">Contact</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ project.project_title }}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body class="interior-page">
+        <header class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="navbar-nav mx-auto">
+                    <a class="nav-item nav-link" href="/">Project Management</a>
+                    <a class="nav-item nav-link" href="/projects">Projects</a>
+                    <a class="nav-item nav-link" href="/about">About</a>
+                    <a class="nav-item nav-link" href="/contact">Contact</a>
+                </div>
+            </nav>
+            <div class="overlap-box"><img src="/static/images/logo.jpg" alt="Logo Image"></div>
+        </header>
+        <section class="hero">
+            <div class="hero-text container">
+                <h1 class="gotham-bold peace-text"><span class="peace-text">{{ project.project_title }}</span></h1>
+                <p>{{ project.summary }}</p>
             </div>
-        </nav>
-    </header>
-    <section class="hero">
-        <div class="hero-text container">
-            <h1 class="gotham-bold">{{ project.project_title }}</h1>
-            <p>{{ project.summary }}</p>
+        </section>
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <img src="/static/images/{{ project.image }}" class="img-fluid" alt="{{ project.project_title }}">
+                </div>
+                <div class="col-md-6 project-details">
+                    <h1>{{ project.project_title }}</h1>
+                    <div class="detail-item">
+                        <label for="client"><strong>Client</strong></label>
+                        <span id="client">{{ project.client }}</span>
+                    </div>
+                    <div class="detail-item">
+                        <label for="location"><strong>Location</strong></label>
+                        <span id="location">{{ project.location }}</span>
+                    </div>
+                    <div class="detail-item">
+                        <label for="construction_value"><strong>Construction Value</strong></label>
+                        <span id="construction_value">{{ project.construction_value }}</span>
+                    </div>
+                    <div class="detail-item">
+                        <label for="services_provided"><strong>Services Provided</strong></label>
+                        <div id="services_provided">
+                            {% for service in project.services_provided %}
+                                <span class="service-item">{{ service }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <label for="industry"><strong>Industry</strong></label>
+                        <span id="industry">{{ project.industry }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 mt-4">
+                    <p>{{ project.description|safe }}</p> <!-- Note the `|safe` filter to allow HTML rendering -->
+                </div>
+            </div>
         </div>
-    </section>
-    <div class="container mt-5 mb-5">
-        <div class="row">
-            <div class="col-md-6 mb-4">
-                <img src="/static/images/{{ project.image }}" class="img-fluid" alt="{{ project.project_title }}">
+        <div class="project-navigation d-flex justify-content-center align-items-center">
+            <a href="{{ url_for('project_detail', project_stub=prev_project_stub) }}" class="nav-arrow prev-arrow" aria-label="Previous Project">
+                <i class="fas fa-chevron-left"></i>
+            </a>
+            
+            <button class="btn btn-primary mx-3" onclick="window.location.href='/projects';">See More</button>
+            
+            <a href="{{ url_for('project_detail', project_stub=next_project_stub) }}" class="nav-arrow next-arrow" aria-label="Next Project">
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+        <!-- Footer Section -->
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-column-left">
+                    <ul class="footer-links">
+                        <li><a href="#">PROJECT MANAGEMENT</a></li>
+                        <li><a href="#">PROJECTS</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column-right">
+                    <ul class="footer-address">
+                        <li>977 NORTH LIVE OAK</li>
+                        <li>NEW BRAUNFELS, TEXAS 78130</li>
+                        <li><a href="#">MAP</a></li>
+                        <li>PHONE (830) 327-1254</li>
+                        <li><a href="https://www.linkedin.com"><img src="/static/images/linkedin.png" alt="LinkedIn"></a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-md-6">
-                <h1>{{ project.project_title }}</h1>
-                <p><strong>Client:</strong> {{ project.client }}</p>
-                <p><strong>Location:</strong> {{ project.location }}</p>
-                <p><strong>Construction Value:</strong> {{ project.construction_value }}</p>
-                <p><strong>Services Provided:</strong> {{ project.services_provided | join(', ') }}</p>
-                <p><strong>Industry:</strong> {{ project.industry }}</p>
+            <div class="footer-bottom-text">
+                <p>&copy; 20224 MOSSBACK CONSTRUCTION DBA SCHUMANN CONSULTING</p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 mt-4">
-                <p>{{ project.description|safe }}</p> <!-- Note the `|safe` filter to allow HTML rendering -->
-            </div>
-        </div>
-    </div>
-    <!-- Footer Section -->
-    <div class="footer-container">
-        <div class="footer-content">
-            <div class="footer-column-left">
-                <ul class="footer-links">
-                    <li><a href="#">PROJECT MANAGEMENT</a></li>
-                    <li><a href="#">PROJECTS</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                </ul>
-            </div>
-            <div class="footer-column-right">
-                <ul class="footer-address">
-                    <li>977 NORTH LIVE OAK</li>
-                    <li>NEW BRAUNFELS, TEXAS 78130</li>
-                    <li><a href="#">MAP</a></li>
-                    <li>PHONE (830) 327-1254</li>
-                    <li><a href="https://www.linkedin.com"><img src="/static/images/linkedin.png" alt="LinkedIn"></a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom-text">
-            <p>&copy; 20224 MOSSBACK CONSTRUCTION DBA SCHUMANN CONSULTING</p>
-        </div>
-    </div>
-</body>
+    </body>
 </html>

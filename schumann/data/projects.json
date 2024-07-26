@@ -12,12 +12,12 @@
         "summary": "Commercial Conversion"
     },
     {
-        "project_title": "Saludos!",
-        "client": "Client ABC",
+        "project_title": "¡Saludos!",
+        "client": "Further Holdings",
         "location": "San Francisco, CA",
         "construction_value": "1,500,000 USD",
-        "services_provided": ["Restaurant/Bar"],
-        "industry": "Restaurant",
+        "services_provided": ["Program Management", "Construction Management", "Project Management", "Project Controls"],
+        "industry": "Restaurant/Bar",
         "description": "The ¡Saludos! project is the renovation of two, two-story, existing office buildings – Buildings B & C into dynamic and engaging education spaces for K-12 learners and educators. This $11 million project will include outdoor learning spaces, playgrounds, a sports field, and drop off/pick up areas with vehicular queuing circulation.\nSchumann Consulting is representing Further Holdings as the Project Manager for the Buildings B & C renovation. In collaboration with the owner, Schumann Consulting is responsible for the selection and contracting of design, construction, and consultant firms.\nSchumann Consulting’s schedule management process and efficiencies brought the project back on time after the project was initially delayed due to the purchase of the property.",
         "project_stub": "saludos",
         "image": "saludos.jpg",
