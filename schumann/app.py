@@ -25,7 +25,7 @@ def project_detail(project_stub):
         # Replace newline characters with paragraph breaks in description
         project['description'] = project['description'].replace('\n', '</p><p>')
 
-    return render_template('service-detail.html', project=project)
+    return render_template('project-detail.html', project=project)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
